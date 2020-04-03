@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.gyf.immersionbar.ImmersionBar;
+
 import butterknife.ButterKnife;
 
 /**
@@ -21,6 +24,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getContentView());
 
+        ImmersionBar.with(this).keyboardEnable(true).init();
 
         ButterKnife.bind(this);
 
@@ -73,4 +77,13 @@ public abstract class BaseActivity extends AppCompatActivity {
      * Date: 2019-2-18 10:25:08
      */
     protected abstract void setListener();
+
+    /**
+     * 初始化沉浸式
+     * Init immersion bar.
+     */
+  /*  protected void initImmersionBar() {
+        //设置共同沉浸式样式
+        ImmersionBar.with(this).keyboardEnable(false).statusBarDarkFont(true, 0.2f).init();
+    }*/
 }
