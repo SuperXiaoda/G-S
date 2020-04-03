@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">G&amp;S</string>
+    <!-- 通用 -->
+    <string name="invalid_network">连接网络失败</string>
+    <string name="exit_prompt">再按一次退出程序</string>
+
+    <!-- 主页-->
+    <string name="function_string">功能</string>
+    <string name="game_string">游戏</string>
+    <string name="mine_string">我的</string>
+
+    <!-- 功能模块-->
+    <string name="custom_view">自定义视图</string>
+    <string name="search_hint">请输入要搜索的内容</string>
+    <string name="dashboard">仪表盘</string>
+    <!-- 游戏模块 -->
+    <string name="jigsaw_puzzle">拼图</string>
+    <string name="photograph">拍照</string>
+    <string name="choice_image">选择图片</string>
+    <!-- 仪表盘控件 -->
+    <string name="min_value_hint">请输入最小值</string>
+    <string name="max_value_hint">请输入最大值</string>
+    <string name="number_of_copies_hint">切分份数</string>
+    <string name="real_time_value_hint">请输入当前数值</string>
+    <string name="unit">请输入单位</string>
+    <string name="sure">确定</string>
+    <string name="min_max_prompt">最大值不能小于最小值</string>
+    <!-- 签名-->
+    <string name="autograph">签名</string>
+    <string name="menu_clear_autograph">清除签名</string>
+    <string name="menu_save_autograph">保存签名</string>
+    <string name="autograph_null">您还没有签名！</string>
+</resources>
