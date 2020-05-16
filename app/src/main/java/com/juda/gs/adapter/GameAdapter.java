@@ -1,7 +1,7 @@
 package com.juda.gs.adapter;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
+import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.juda.gs.R;
 import com.juda.gs.bean.Function;
 import com.juda.gs.util.StringUtil;

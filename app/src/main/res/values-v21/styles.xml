@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--AppCompatSpinner 样式-->
+    <style name="SpnStyle">
+        <item name="android:colorControlNormal">@color/colorPrimary</item>
+    </style>
+</resources>

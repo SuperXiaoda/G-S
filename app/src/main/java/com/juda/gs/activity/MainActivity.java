@@ -17,6 +17,7 @@ import java.util.List;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
+
 import butterknife.BindView;
 
 public class MainActivity extends BaseActivity {
@@ -81,12 +82,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void setListener() {
-        mBottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(int position, boolean wasSelected) {
-                if (!wasSelected) {
-                    mMainViewPager.setCurrentItem(position, false); // 切换ViewPager
-                }
+        mBottomNavigation.setOnTabSelectedListener((position, wasSelected) -> {
+            if (!wasSelected) {
+                mMainViewPager.setCurrentItem(position, false); // 切换ViewPager
             }
         });
     }
@@ -103,6 +101,7 @@ public class MainActivity extends BaseActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
-
     }
+
+
 }

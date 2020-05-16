@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">G&amp;S</string>
-    <!-- 通用 -->
     <string name="invalid_network">连接网络失败</string>
     <string name="exit_prompt">再按一次退出程序</string>
-
-    <!-- 主页-->
+    <string name="apply_jurisdiction_explain">该应用需要这些权限，已保证应用正常运行</string>
+    <string name="prompt">提示</string>
+    <string name="limits_of_authority">您有一些权限没有授予，建议您尽快授予，以保证您能正常使用本应用</string>
     <string name="function_string">功能</string>
     <string name="game_string">游戏</string>
     <string name="mine_string">我的</string>
-
-    <!-- 功能模块-->
     <string name="custom_view">自定义视图</string>
     <string name="search_hint">请输入要搜索的内容</string>
     <string name="dashboard">仪表盘</string>
+    <string name="layout">各种布局</string>
+    <string name="constrain_layout">约束性布局</string>
     <!-- 游戏模块 -->
     <string name="jigsaw_puzzle">拼图</string>
     <string name="photograph">拍照</string>

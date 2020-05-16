@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 
 import com.juda.gs.R;
 import com.juda.gs.activity.CustomViewActivity;
+import com.juda.gs.activity.LayoutActivity;
 import com.juda.gs.adapter.FunctionListAdapter;
 import com.juda.gs.api.APIConstants;
 import com.juda.gs.bean.Function;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 
 /**
@@ -65,8 +67,11 @@ public class FunctionFragment extends BaseFragment {
                     intent.setClass(mActivity, CustomViewActivity.class);
                     startActivity(intent);
                     break;
+                case APIConstants.FUNCTION_INDEX_LAYOUT:
+                    intent.setClass(mActivity, LayoutActivity.class);
+                    startActivity(intent);
+                    break;
             }
-
         }));
     }
 
@@ -74,6 +79,7 @@ public class FunctionFragment extends BaseFragment {
     protected void loadData() {
         ArrayList<Function> data = new ArrayList<>();
         data.add(new Function(getString(R.string.custom_view), APIConstants.FUNCTION_INDEX_CUSTOM_VIEW));
+        data.add(new Function(getString(R.string.layout), APIConstants.FUNCTION_INDEX_LAYOUT));
         mAdapter.setNewData(data);
     }
 }

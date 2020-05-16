@@ -24,7 +24,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getContentView());
 
-        ImmersionBar.with(this).keyboardEnable(true).init();
+        ImmersionBar.with(this).keyboardEnable(true).statusBarDarkFont(false, 0.2f).init();
 
         ButterKnife.bind(this);
 

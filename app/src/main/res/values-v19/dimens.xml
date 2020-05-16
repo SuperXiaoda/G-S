@@ -8,4 +8,8 @@
     <!--下拉刷新生效距离-->
     <dimen name="refreshDistance">50dp</dimen>
     <dimen name="status_bar_height">25dp</dimen>
+    <!-- 状态栏高度 -->
+    <dimen name="statusBarHeight">25dp</dimen>
+
+
 </resources>

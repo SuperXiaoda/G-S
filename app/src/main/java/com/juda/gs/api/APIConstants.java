@@ -8,11 +8,14 @@ package com.juda.gs.api;
 public interface APIConstants {
 
 
-
     // 自定义视图
     int FUNCTION_INDEX_CUSTOM_VIEW = 1000;
+
     int FUNCTION_INDEX_CUSTOM_VIEW_DASHBOARD = 1001;
     int FUNCTION_INDEX_CUSTOM_VIEW_AUTOGRAPH = 1002;
+    // 布局
+    int FUNCTION_INDEX_LAYOUT = 2000;
+    int FUNCTION_INDEX_LAYOUT_CONSTRAIN_LAYOUT = 2001;
 
     // 游戏
     int GAME_INDEX_JIGSAW_PUZZLE = 2000;
