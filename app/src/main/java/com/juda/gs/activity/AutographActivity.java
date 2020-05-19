@@ -1,6 +1,7 @@
 package com.juda.gs.activity;
 
 import android.os.Environment;
+
 import com.juda.gs.R;
 import com.juda.gs.util.FileUtil;
 import com.juda.gs.util.ToastUtil;
@@ -9,8 +10,10 @@ import com.juda.gs.view.LinePathView;
 import java.io.File;
 import java.io.IOException;
 
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
+
 import butterknife.BindView;
 
 /**
@@ -21,10 +24,10 @@ import butterknife.BindView;
 public class AutographActivity extends BaseActivity {
 
     // 返回按钮
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
+    @BindView(R.id.back)
+    AppCompatImageButton mBack;
     // 返回
-    @BindView(R.id.back_title)
+    @BindView(R.id.title)
     AppCompatTextView mTitle;
     // 签名文字
     @BindView(R.id.line_path_view)
@@ -40,7 +43,6 @@ public class AutographActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        mToolbar.inflateMenu(R.menu.autograph);
         mTitle.setText(getString(R.string.autograph));
         if (FileUtil.getSdState()) {
             File sdcardDir = Environment.getExternalStorageDirectory();
@@ -51,11 +53,11 @@ public class AutographActivity extends BaseActivity {
 
     @Override
     protected void setListener() {
-        mTitle.setOnClickListener(((v -> {
-            finish();
-        })));
+        mBack.setOnClickListener(((v -> finish())));
 
-        mToolbar.setOnMenuItemClickListener(((item -> {
+
+
+  /*      mToolbar.setOnMenuItemClickListener(((item -> {
             switch (item.getItemId()) {
                 case R.id.clear_autograph:
                     mLinePathView.clear();
@@ -76,7 +78,7 @@ public class AutographActivity extends BaseActivity {
                     return true;
             }
             return false;
-        })));
+        })));*/
     }
 
 

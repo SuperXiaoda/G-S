@@ -82,7 +82,7 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 // 判断是否存在文字
                 if (StringUtil.isEmpty(mSearchSrcText.getText().toString())) {
-                    mAdapter.setNewData(mData);
+                    mAdapter.setList(mData);
                 } else {
                     mSearchData.clear();
                     matcherSearchText(mSearchSrcText.getText().toString());
@@ -102,7 +102,7 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (StringUtil.isEmpty(mSearchSrcText.getText().toString())) {
-                    mAdapter.setNewData(mData);
+                    mAdapter.setList(mData);
                     KeyBoardUtil.closeKeyboard(mSearchSrcText, getApplicationContext());
                 }
             }
@@ -125,6 +125,10 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
                     intent.setClass(getApplicationContext(), AutographActivity.class);
                     startActivity(intent);
                     break;
+                case APIConstants.FUNCTION_INDEX_CUSTOM_VIEW_CURRENCY_FORM:
+                    intent.setClass(getApplicationContext(), CurrencyFormActivity.class);
+                    startActivity(intent);
+                    break;
             }
         })));
     }
@@ -142,7 +146,8 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     private void initData() {
         mData.add(new Function(getString(R.string.dashboard), APIConstants.FUNCTION_INDEX_CUSTOM_VIEW_DASHBOARD));
         mData.add(new Function(getString(R.string.autograph), APIConstants.FUNCTION_INDEX_CUSTOM_VIEW_AUTOGRAPH));
-        mAdapter.setNewData(mData);
+        mData.add(new Function(getString(R.string.currency_form), APIConstants.FUNCTION_INDEX_CUSTOM_VIEW_CURRENCY_FORM));
+        mAdapter.setList(mData);
     }
 
     // 匹配搜索文字
@@ -152,6 +157,6 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
                 mSearchData.add(new Function(StringUtil.matcherSearchText(getResources().getColor(R.color.colorAccent), function.getName(), searchText), function.getFunctionPosition()));
             }
         }
-        mAdapter.setNewData(mSearchData);
+        mAdapter.setList(mSearchData);
     }
 }

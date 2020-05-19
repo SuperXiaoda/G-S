@@ -80,6 +80,6 @@ public class FunctionFragment extends BaseFragment {
         ArrayList<Function> data = new ArrayList<>();
         data.add(new Function(getString(R.string.custom_view), APIConstants.FUNCTION_INDEX_CUSTOM_VIEW));
         data.add(new Function(getString(R.string.layout), APIConstants.FUNCTION_INDEX_LAYOUT));
-        mAdapter.setNewData(data);
+        mAdapter.setList(data);
     }
 }

@@ -4,6 +4,7 @@
     <string name="exit_prompt">再按一次退出程序</string>
     <string name="apply_jurisdiction_explain">该应用需要这些权限，已保证应用正常运行</string>
     <string name="prompt">提示</string>
+    <string name="save">保存</string>
     <string name="limits_of_authority">您有一些权限没有授予，建议您尽快授予，以保证您能正常使用本应用</string>
     <string name="function_string">功能</string>
     <string name="game_string">游戏</string>
@@ -30,4 +31,6 @@
     <string name="menu_clear_autograph">清除签名</string>
     <string name="menu_save_autograph">保存签名</string>
     <string name="autograph_null">您还没有签名！</string>
+    <!-- 通用表单-->
+    <string name="currency_form">通用表单</string>
 </resources>

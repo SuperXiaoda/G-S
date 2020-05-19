@@ -6,25 +6,78 @@
     android:orientation="vertical">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:theme="@style/ToolbarTheme"
+    <!--   <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar"
+           android:theme="@style/ToolbarTheme"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@color/colorAccent">
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/back_title"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:drawableStart="@drawable/ic_arrow_back_white_24dp"
+               android:drawableLeft="@drawable/ic_arrow_back_white_24dp"
+               android:drawablePadding="4dp"
+               android:gravity="center_vertical"
+               android:textColor="@android:color/white"
+               android:textSize="18sp"
+               tools:text="返回" />
+       </androidx.appcompat.widget.Toolbar>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorAccent">
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/back_title"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableStart="@drawable/ic_arrow_back_white_24dp"
-            android:drawableLeft="@drawable/ic_arrow_back_white_24dp"
-            android:drawablePadding="4dp"
-            android:gravity="center_vertical"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
-            tools:text="返回" />
-    </androidx.appcompat.widget.Toolbar>
+            android:textSize="20sp"
+            tools:text="标题" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/save_autograph"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/menu_save_autograph"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/clear_autograph"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toStartOf="@+id/save_autograph"
+            android:layout_toLeftOf="@+id/save_autograph"
+            android:gravity="center"
+            android:text="@string/menu_clear_autograph"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
 
     <com.juda.gs.view.LinePathView
         android:id="@+id/line_path_view"

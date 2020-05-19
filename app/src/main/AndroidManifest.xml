@@ -30,18 +30,18 @@
         android:usesCleartextTraffic="true">
 
         <!-- 在manifest加入如下配置 -->
-       <!-- <meta-data
+        <meta-data
             android:name="android.max_aspect"
-            android:value="2.4" />-->
+            android:value="2.4" />
 
         <!--适配华为（huawei）刘海屏-->
-      <!--  <meta-data
+        <meta-data
             android:name="android.notch_support"
-            android:value="true" />-->
+            android:value="true" />
         <!--适配小米（xiaomi）刘海屏-->
-        <!--<meta-data
+        <meta-data
             android:name="notch.config"
-            android:value="portrait|landscape" />-->
+            android:value="portrait|landscape" />
 
 
         <activity
@@ -54,6 +54,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:exported="true"
+            android:theme="@style/Theme_Light.Test" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
 
         <!-- 主页面 -->
         <activity
@@ -86,6 +95,21 @@
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustPan" />
 
+        <!-- 通用表单页面 -->
+        <activity
+            android:name="com.juda.gs.activity.CurrencyFormActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 跳转选择页面 -->
+        <activity
+            android:name="com.juda.gs.activity.JumpSelectActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
         <!-- 布局 -->
         <activity
             android:name=".activity.LayoutActivity"

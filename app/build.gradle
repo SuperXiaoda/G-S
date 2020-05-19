@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.juda.gs"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -59,7 +59,7 @@ dependencies {
     // 控件依赖注入（ButterKnife）
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-   
+
     // recycler_view
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
@@ -70,6 +70,7 @@ dependencies {
      *       工具
      */
 
+
     // 基础依赖包，必须要依赖
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
     // 沉浸式实现fragment快速实现（可选）
@@ -77,9 +78,6 @@ dependencies {
 
     // Json解析库（Gson）
     implementation 'com.google.code.gson:gson:2.8.5'
-
-    // Glide使用OkHttp加载
-    implementation 'com.github.bumptech.glide:okhttp3-integration:4.0.0'
     /**
      *      UI
      */
@@ -98,6 +96,7 @@ dependencies {
     implementation('com.afollestad.material-dialogs:core:0.9.5.0') {
         exclude group: 'com.android.support'
     }
+
     // Material风格底部导航控件
     implementation project(':BottomNavigation')
 
